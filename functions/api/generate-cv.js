@@ -22,8 +22,8 @@ export async function onRequest(context) {
         const formData = await context.request.json();
 
         // Gemini API anahtarını environment variable'dan al
-        const AIzaSyAUtQvbeEzyHi6apO6rUe858otLX0qX-OA = context.env.AIzaSyAUtQvbeEzyHi6apO6rUe858otLX0qX-OA;
-        if (!AIzaSyAUtQvbeEzyHi6apO6rUe858otLX0qX-OA) {
+        const GEMINI_API_KEY = context.env.GEMINI_API_KEY;
+        if (!GEMINI_API_KEY) {
             throw new Error('API anahtarı sunucuda tanımlı değil.');
         }
 
