@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yapay zeka destekli, tamamen ücretsiz profesyonel CV oluşturucu. Eğitim, deneyim ve yeteneklerinizi girin, AI sizin için etkileyici bir özgeçmiş hazırlasın.">
+    <meta name="keywords" content="CV oluşturucu, ücretsiz cv, yapay zeka cv, profesyonel özgeçmiş, pdf cv, ai cv creator">
+    <meta name="author" content="AI CV Creator">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="AI CV Creator - Ücretsiz Profesyonel Özgeçmiş Oluşturucu">
+    <meta property="og:description" content="Yapay zeka ile dakikalar içinde etkileyici bir CV oluşturun, PDF olarak indirin.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://KULLANICI_ADIN.github.io/cv-creator/">
+    <meta property="og:image" content="https://KULLANICI_ADIN.github.io/cv-creator/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>AI CV Creator | Ücretsiz Profesyonel Özgeçmiş Oluşturucu</title>
+    <link rel="canonical" href="https://KULLANICI_ADIN.github.io/cv-creator/">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Search Console doğrulama kodunuzu buraya ekleyin -->
+    <!-- <meta name="google-site-verification" content="DOĞRULAMA_KODU" /> -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ AI CV Creator</h1>
+            <p class="subtitle">Yapay zeka ile profesyonel özgeçmişinizi saniyeler içinde oluşturun, PDF olarak indirin.</p>
+        </header>
+
+        <main>
+            <form id="cvForm" class="glass-card">
+                <h2>Kişisel Bilgiler</h2>
+                <div class="form-group">
+                    <input type="text" id="ad" placeholder="Adınız" required>
+                    <input type="text" id="soyad" placeholder="Soyadınız" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="E-posta">
+                    <input type="tel" id="telefon" placeholder="Telefon">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="adres" placeholder="Adres (isteğe bağlı)">
+                    <input type="text" id="tc" placeholder="TC Kimlik No (isteğe bağlı)">
+                </div>
+                <div class="form-group">
+                    <label for="fotograf">Fotoğraf (opsiyonel)</label>
+                    <input type="file" id="fotograf" accept="image/*">
+                </div>
+
+                <h2>Eğitim</h2>
+                <div class="form-group">
+                    <input type="text" id="okul" placeholder="Okul / Üniversite" required>
+                    <input type="text" id="bolum" placeholder="Bölüm" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="mezuniyetYili" placeholder="Mezuniyet Yılı">
+                </div>
+
+                <h2>İş Deneyimleri</h2>
+                <div id="deneyimler">
+                    <div class="deneyim-grup">
+                        <input type="text" class="sirket" placeholder="Şirket">
+                        <input type="text" class="pozisyon" placeholder="Pozisyon">
+                        <input type="text" class="tarih" placeholder="Tarih (örn. 2020-2023)">
+                        <textarea class="aciklama" placeholder="Kısa açıklama"></textarea>
+                    </div>
+                </div>
+                <button type="button" id="deneyimEkle" class="btn-secondary">+ Deneyim Ekle</button>
+
+                <h2>Yetenekler</h2>
+                <div id="yetenekler">
+                    <input type="text" class="yetenek" placeholder="Yetenek (örn. Python)">
+                </div>
+                <button type="button" id="yetenekEkle" class="btn-secondary">+ Yetenek Ekle</button>
+
+                <h2>Sertifikalar & Lisanslar</h2>
+                <div id="sertifikalar">
+                    <input type="text" class="sertifika" placeholder="Sertifika adı">
+                </div>
+                <button type="button" id="sertifikaEkle" class="btn-secondary">+ Sertifika Ekle</button>
+
+                <h2>Ek Açıklama (AI bunu güzelleştirecek)</h2>
+                <textarea id="ekAciklama" rows="3" placeholder="Kendinizi kısaca tanıtın, hedeflerinizi yazın..."></textarea>
+
+                <button type="submit" id="generateBtn" class="btn-primary">
+                    <span id="btnText">🚀 AI ile CV Oluştur</span>
+                    <span id="btnLoader" class="loader hidden"></span>
+                </button>
+            </form>
+        </main>
+
+        <!-- Gizli CV Önizleme (PDF için) -->
+        <div id="cvPreview" class="cv-preview-hidden"></div>
+    </div>
+
+    <footer>
+        <p>© 2026 AI CV Creator | Tamamen ücretsiz, hiçbir veri saklanmaz.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
