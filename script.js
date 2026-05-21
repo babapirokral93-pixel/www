@@ -1,5 +1,5 @@
 // UYARI: Eski API anahtarını silip buraya YENİ oluşturduğun anahtarı yapıştır!
-const API_KEY = 'BURAYA_YENI_API_ANAHTARINI_YAZ'; 
+const API_KEY = 'AIzaSyAf_y9QjJnlIKrcPfzYQmj5t6fYhNsJqTY'; 
 
 document.addEventListener('DOMContentLoaded', () => {
     // Dinamik alan ekleme
